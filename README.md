@@ -1,4 +1,4 @@
-```perl
+```javascript
 var CompaniesHouseAPI = require('companies-house-api');
 var async = require('async');
 
