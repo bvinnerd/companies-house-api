@@ -4,7 +4,6 @@ var async = require('async');
 
 var chapi = new CompaniesHouseAPI({apiKey: 'yourApiKey'});
 
-// FIXME: use async waterfall
 async.waterfall(
     [
         function(next) {
