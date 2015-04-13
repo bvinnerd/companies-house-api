@@ -47,6 +47,12 @@ CompaniesHouseAPI.prototype.filingHistory = function(companyNumber, cb) {
     });
 };
 
+CompaniesHouseAPI.prototype.filingHistoryItem = function(companyNumber, transactionId, cb) {
+    this.api.request('GET', '/company/' + companyNumber + '/filing-history/' + transactionId, null, function(err, res) {
+        cb(err, res);
+    });
+};
+
 CompaniesHouseAPI.prototype.insolvency = function(companyNumber, cb) {
     this.api.request('GET', '/company/' + companyNumber + '/insolvency', null, function(err, res) {
         cb(err, res);
